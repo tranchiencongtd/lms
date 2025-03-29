@@ -69,7 +69,7 @@ export async function POST(req: Request) {
       avatar: image_url,
       joinedAt: new Date(),
       status: EUserStatus.ACTIVE,
-      bio: "User at Evonhub",
+      bio: "User at toanthaycong",
     });
     return NextResponse.json({ message: "OK", user: mongoUser });
   } else if (eventType === "user.updated") {

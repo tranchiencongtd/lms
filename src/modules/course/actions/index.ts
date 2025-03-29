@@ -78,6 +78,7 @@ export async function fetchCourseBySlug(
 
     return JSON.parse(JSON.stringify(course));
   } catch (error) {
+    console.log("aaaaaaaaaaaaaaaaaaaa");
     console.log("error:", error);
   }
 }
@@ -229,7 +230,7 @@ export async function handleEnrollCourse({
     });
     if (existOrder) {
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://evonhub.dev/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
       };
     }
     const orderObject: {
@@ -305,7 +306,7 @@ export async function handleEnrollPackage({
     });
     if (existOrder) {
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://evonhub.dev/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
       };
     }
     const newOrder = new OrderModel({

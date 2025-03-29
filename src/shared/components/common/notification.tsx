@@ -35,7 +35,7 @@ const Notification = () => {
         align="end"
         className="w-80 p-0 shadow-sm dark:bg-grayDarker dark:border-opacity-10 dark:border-gray-200"
       >
-        <div className="p-3 font-bold text-base border-b border-b-gray-200 dark:border-opacity-10">
+        <div className="p-2 text-base border-b border-b-gray-200 dark:border-opacity-10">
           Thông báo
         </div>
         {notifications && notifications?.length > 0 && (

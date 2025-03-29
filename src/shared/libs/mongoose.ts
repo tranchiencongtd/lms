@@ -17,7 +17,6 @@ export const connectToDatabase = async () => {
     isConnected = true;
     console.log("=> using new database connection");
   } catch (error) {
-    console.log(error)
     console.log("=> error while connecting with database:");
   }
 };

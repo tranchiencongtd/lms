@@ -9,7 +9,7 @@ const page = () => {
       </h1>
       <div></div>
       <Link
-        href="https://fb.com/tuan.trananh.0509"
+        href="https://fb.com/toanthaycong"
         className={primaryButtonClassName}
       >
         Liên hệ

@@ -72,7 +72,7 @@ const LessonItem = ({
             )}
           >
             <Link
-              href={`https://evonhub.dev${pathname}?slug=${url}`}
+              href={`https://toanthaycong.com${pathname}?slug=${url}`}
               className="block"
             >
               <div className="line-clamp-1">{title}</div>

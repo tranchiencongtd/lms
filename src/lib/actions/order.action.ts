@@ -83,10 +83,10 @@ export async function updateOrder(params: UpdateOrderParams) {
       }
       // Send email
       // await resend.emails.send({
-      //   from: "Evonhub@evonhub.dev",
+      //   from: "toanthaycong@toanthaycong.com",
       //   to: findUser.email,
       //   subject: "Thông báo - Đơn hàng của bạn đã được duyệt 🔥",
-      //   html: `<p>Cảm ơn bạn đã mua khóa học tại <strong>evonhub</strong>. Bây giờ bạn có thể truy cập vào <a href="https://evonhub.dev/study" target="_blank">khu vực học tập</a> để bắt đầu học nha.</p>`,
+      //   html: `<p>Cảm ơn bạn đã mua khóa học tại <strong>toanthaycong</strong>. Bây giờ bạn có thể truy cập vào <a href="https://toanthaycong.com/study" target="_blank">khu vực học tập</a> để bắt đầu học nha.</p>`,
       // });
     } else {
       if (
@@ -212,7 +212,7 @@ export async function userBuyCourse(params: Partial<CreateOrderParams>) {
     });
     if (existOrder) {
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://evonhub.dev/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
       };
     }
     const newOrder = new OrderModel({

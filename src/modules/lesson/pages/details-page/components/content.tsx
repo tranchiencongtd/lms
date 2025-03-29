@@ -12,6 +12,7 @@ import { useEffect, useRef } from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { Loading } from "./loading";
 import { PlayerNavigation } from "./player-navigation";
+import ReactPlayer from "react-player";
 
 export interface LessonContentProps {
   isLoading?: boolean;
@@ -125,7 +126,9 @@ export function LessonContent({
                     src={`https://drive.google.com/file/d/${iframeId}/preview`}
                     className="size-full object-fill"
                     allow="autoplay"
+                    sandbox="allow-scripts allow-same-origin"
                   ></iframe>
+
                 </div>
               ) : (
                 <div className="w-full h-full lg:border borderDarkMode lg:rounded-lg bgDarkMode"></div>

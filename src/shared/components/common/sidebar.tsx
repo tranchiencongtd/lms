@@ -26,11 +26,11 @@ export function Sidebar({ role }: SidebarProps) {
             width={48}
             height={48}
             src="/logo.png"
-            alt="EvonHub"
+            alt="toanthaycong"
             className="max-h-full max-w-full object-contain"
           ></Image>
         </div>
-        <span className="text-xl font-bold">evonHub</span>
+        <span className="text-xl font-bold">toanthaycong</span>
       </Link>
       <ul className="flex flex-col gap-3">
         {menuLinks.map((link) => {

@@ -35,15 +35,15 @@ export const Header = () => {
             width={48}
             height={48}
             src="/logo.png"
-            alt="EvonHub"
+            alt="toanthaycong"
             className="object-contain max-h-full max-w-full"
           ></Image>
         </div>
-        <span className="text-lg font-bold">evonHub</span>
+        <span className="text-lg font-bold">toanthaycong</span>
       </Link>
       {!isLessonPage && (
         <Link
-          href="https://evondev.com/huong-dan-mua-khoa-hoc/"
+          href="/huong-dan-mua-khoa-hoc"
           target="_blank"
           rel="noopener noreferrer"
           className="h-10 rounded-full px-5 lg:flex items-center justify-center bg-gradient-to-r from-[#cbabff] to-[#ff979a] text-white font-bold shadow-[0_0_1px_3px_rgb(203,_171,_255,0.2)] hidden text-sm"

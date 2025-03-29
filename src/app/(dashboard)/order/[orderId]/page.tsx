@@ -21,8 +21,8 @@ const page = async ({
   const isOrderMembership = orderDetails?.plan !== MembershipPlan.None;
 
   if (isOrderMembership) {
-    bankInfo.bankNumber = "33366668888";
-    bankInfo.bankAccount = "TRAN ANH TUAN";
+    bankInfo.bankNumber = "23675917";
+    bankInfo.bankAccount = "TRẦN CHIẾN CÔNG";
     bankInfo.bankName = "ACB";
   }
 
@@ -100,7 +100,7 @@ const page = async ({
         <div>
           Nếu bạn cần hỗ trợ, vui lòng liên hệ Admin qua fb cá nhân:{" "}
           <Link
-            href="https://fb.com/tuan.trananh.0509"
+            href="https://fb.com/toanthaycong"
             className="underline text-primary"
             target="_blank"
           >
