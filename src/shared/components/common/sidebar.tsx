@@ -20,17 +20,17 @@ export function Sidebar({ role }: SidebarProps) {
   if (isLessonPage) return null;
   return (
     <aside className="fixed top-0 left-0 pb-8 px-5 hidden xl:block bgDarkMode bottom-0 w-[300px] z-50 sidebar border-r border-gray-200 dark:border-opacity-10">
-      <Link href="/" className="flex items-center gap-2 py-3 mb-5 h-20">
-        <div className="bg-primary p-3 rounded-full size-10 flex-shrink-0">
+      <Link href="/" className="flex items-center pt-3 mb-1 h-30">
+        <div className="p-3 rounded-full size-20 flex-shrink-0">
           <Image
-            width={48}
-            height={48}
-            src="/logo.png"
+            width={150}
+            height={150}
+            src="/icon.svg"
             alt="toanthaycong"
             className="max-h-full max-w-full object-contain"
           ></Image>
         </div>
-        <span className="text-xl font-bold">toanthaycong</span>
+        <span className="text-xl font-bold">Toán Thầy Công</span>
       </Link>
       <ul className="flex flex-col gap-3">
         {menuLinks.map((link) => {

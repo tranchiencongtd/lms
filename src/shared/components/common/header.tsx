@@ -31,12 +31,12 @@ export const Header = () => {
         })}
       >
         <div className="bg-primary p-3 rounded-full size-10 flex-shrink-0">
-          <Image
-            width={48}
-            height={48}
-            src="/logo.png"
+           <Image
+            width={150}
+            height={150}
+            src="/icon.svg"
             alt="toanthaycong"
-            className="object-contain max-h-full max-w-full"
+            className="max-h-full max-w-full object-contain"
           ></Image>
         </div>
         <span className="text-lg font-bold">toanthaycong</span>
