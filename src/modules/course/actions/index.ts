@@ -1,6 +1,4 @@
 "use server";
-
-import { usersHTML, usersJS, usersJSAdvanced, usersReact } from "@/data";
 import CouponModel from "@/modules/coupon/models";
 import OrderModel from "@/modules/order/models";
 import { OrderItemData } from "@/modules/order/types";
@@ -181,47 +179,6 @@ export async function handleEnrollCourse({
       };
 
     let status: OrderStatus = OrderStatus.Pending;
-
-    if (
-      findCourse.slug === "khoa-hoc-html-css-master" &&
-      usersHTML.includes(findUser.email)
-    ) {
-      findUser.courses.push(findCourse._id);
-      await findUser.save();
-      status = OrderStatus.Approved;
-      total = 0;
-      amount = 0;
-    }
-    if (
-      ["khoa-hoc-reactjs-co-ban"].includes(findCourse.slug) &&
-      usersReact.includes(findUser.email)
-    ) {
-      findUser.courses.push(findCourse._id);
-      await findUser.save();
-      status = OrderStatus.Approved;
-      total = 0;
-      amount = 0;
-    }
-    if (
-      findCourse.slug === "khoa-hoc-javascript-co-ban-cho-nguoi-moi" &&
-      usersJS.includes(findUser.email)
-    ) {
-      findUser.courses.push(findCourse._id);
-      await findUser.save();
-      status = OrderStatus.Approved;
-      total = 0;
-      amount = 0;
-    }
-    if (
-      findCourse.slug === "khoa-hoc-javascript-chuyen-sau" &&
-      usersJSAdvanced.includes(findUser.email)
-    ) {
-      findUser.courses.push(findCourse._id);
-      await findUser.save();
-      status = OrderStatus.Approved;
-      total = 0;
-      amount = 0;
-    }
 
     const existOrder = await OrderModel.findOne({
       user: userId,
