@@ -30,7 +30,7 @@ export const Header = () => {
           "lg:hidden": !isLessonPage,
         })}
       >
-        <div className="bg-primary p-3 rounded-full size-10 flex-shrink-0">
+        <div className="py-3 rounded-full size-20 flex-shrink-0">
            <Image
             width={150}
             height={150}
@@ -39,7 +39,7 @@ export const Header = () => {
             className="max-h-full max-w-full object-contain"
           ></Image>
         </div>
-        <span className="text-lg font-bold">toanthaycong</span>
+        <span className="text-lg font-bold">Toán Thầy Công</span>
       </Link>
       {!isLessonPage && (
         <Link

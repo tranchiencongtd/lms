@@ -45,7 +45,7 @@ const page = async () => {
                   <TableCell className="font-bold">{order.code}</TableCell>
                   <TableCell>
                     <div className="max-w-[300px] font-bold">
-                      <div className="line-clamp-1">{order.course.title}</div>
+                      <div className="line-clamp-1">{order.course?.title}</div>
                     </div>
                   </TableCell>
                   <TableCell>
