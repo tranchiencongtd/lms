@@ -51,6 +51,10 @@ const lessonSchema = new Schema<LessonModelProps>({
   iframe: {
     type: String,
   },
+  iframeYoutube: {
+    type: String,
+    default: "", // Thêm trường mới
+  },
   createdAt: {
     type: Date,
     default: Date.now,

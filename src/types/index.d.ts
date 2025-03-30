@@ -133,6 +133,7 @@ export interface CreateLessonParams {
   lectureId: string;
   courseId: string;
   iframe?: string;
+  iframeYoutube?: string;
 }
 export interface UpdateLessonParams {
   lessonId: string;

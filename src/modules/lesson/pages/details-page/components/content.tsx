@@ -4,7 +4,7 @@ import { useQueryLessonsByCourseId } from "@/modules/lesson/services/data/query-
 import { IconFullScreen } from "@/shared/components";
 import { RatingForm } from "@/shared/features/rating";
 import { LessonItemCutomizeData } from "@/shared/types";
-import { cn, extractDriveId } from "@/shared/utils";
+import { cn, extractDriveId, extractYoutubeId } from "@/shared/utils";
 import { useGlobalStore } from "@/store";
 import MuxPlayer from "@mux/mux-player-react";
 import Prism from "prismjs";
@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { Loading } from "./loading";
 import { PlayerNavigation } from "./player-navigation";
-import ReactPlayer from "react-player";
+
 
 export interface LessonContentProps {
   isLoading?: boolean;
@@ -45,8 +45,9 @@ export function LessonContent({
   const nextLesson = lessonList?.[lessonIndex + 1]?._id;
   const prevLesson = lessonList?.[lessonIndex - 1]?._id;
   const iframeId = extractDriveId(lessonDetails?.iframe || "");
+  const iframeYoutubeId = extractYoutubeId(lessonDetails?.iframeYoutube || "");
   const videoId = lessonDetails?.video || "";
-  const hasVideo = videoId || iframeId;
+  const hasVideo = videoId || iframeId || iframeYoutubeId;
 
   useEffect(() => {
     const links = document.querySelectorAll(".lesson-content a");
@@ -128,7 +129,15 @@ export function LessonContent({
                     allow="autoplay"
                     sandbox="allow-scripts allow-same-origin"
                   ></iframe>
-
+                </div>
+              ) : iframeYoutubeId ? (
+                <div className="size-full lg:border borderDarkMode lg:rounded-lg bgDarkMode overflow-hidden lg:absolute lg:left-0 lg:top-0">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${iframeYoutubeId}`}
+                    className="size-full object-fill"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               ) : (
                 <div className="w-full h-full lg:border borderDarkMode lg:rounded-lg bgDarkMode"></div>

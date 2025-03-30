@@ -34,6 +34,7 @@ interface LessonItemUpdateProps {
     duration: number;
     assetId?: string;
     iframe?: string;
+    iframeYoutube?: string;
   };
   course: {
     id: string;
@@ -60,6 +61,7 @@ const LessonItemUpdate = ({
       duration: lesson.duration,
       assetId: lesson.assetId,
       iframe: lesson.iframe,
+      iframeYoutube: lesson.iframeYoutube,
     },
   });
 
@@ -171,7 +173,19 @@ const LessonItemUpdate = ({
           name="iframe"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Iframe</FormLabel>
+              <FormLabel>Google Drive ID</FormLabel>
+              <FormControl>
+                <Input type="text" className="font-sans" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="iframeYoutube"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Url Youtube</FormLabel>
               <FormControl>
                 <Input type="text" className="font-sans" {...field} />
               </FormControl>

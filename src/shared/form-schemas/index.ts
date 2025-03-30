@@ -9,5 +9,6 @@ export const updateLessonSchema = z.object({
   assetId: z.string().optional(),
   iframe: z.string().optional(),
   trial: z.boolean().optional(),
+  iframeYoutube: z.string().optional(),
 });
 export type UpdateLessonValues = z.infer<typeof updateLessonSchema>;

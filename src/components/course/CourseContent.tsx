@@ -59,6 +59,7 @@ const CourseContent = ({
         duration: number;
         lectureId: string;
         iframe: string;
+        iframeYoutube: string;
       }[];
     }[];
   };
@@ -82,6 +83,7 @@ const CourseContent = ({
         duration: number;
         lectureId: string;
         iframe: string;
+        iframeYoutube: string;
       }[];
     }[]
   >([]);
@@ -92,6 +94,7 @@ const CourseContent = ({
     content: "",
     video: "",
     iframe: "",
+    iframeYoutube: "",
   });
   const [editLectureIndex, setEditLectureIndex] = useState("");
   const [editLessonIndex, setEditLessonIndex] = useState("");
@@ -222,12 +225,13 @@ const CourseContent = ({
       type: string;
       slug: string;
       iframe: string;
+      iframeYoutube: string;
     }
   ) => {
     setIsSubmitting((draft) => {
       draft.lesson = true;
     });
-    try {
+    try { 
       await updateLesson({
         lessonId,
         path: `/admin/course/content?slug=${data.slug}`,
@@ -236,6 +240,7 @@ const CourseContent = ({
           slug: convertSlug(lessonData.title || lesson.title),
           courseId: data._id as any,
           iframe: lessonData.iframe || lesson.iframe,
+          iframeYoutube: lessonData.iframeYoutube || lesson.iframeYoutube,
         },
       });
       toast.success("Bài học đã được cập nhật thành công");

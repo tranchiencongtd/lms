@@ -16,6 +16,7 @@ export interface ILesson extends Document {
   createdAt: Date;
   assetId: string;
   iframe: string;
+  iframeYoutube: string; 
   _destroy: boolean;
 }
 const lessonSchema = new Schema<ILesson>({
@@ -67,6 +68,10 @@ const lessonSchema = new Schema<ILesson>({
   },
   iframe: {
     type: String,
+  },
+  iframeYoutube: {
+    type: String,
+    default: "", // Giá trị mặc định là chuỗi rỗng
   },
   createdAt: {
     type: Date,
