@@ -211,8 +211,9 @@ export async function userBuyCourse(params: Partial<CreateOrderParams>) {
       status: EOrderStatus.PENDING,
     });
     if (existOrder) {
+      const domain = process.env.APP_DOMAIN || "https://toanthaycong.com";
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào ${domain}/order/${existOrder.code} để xem`,
       };
     }
     const newOrder = new OrderModel({

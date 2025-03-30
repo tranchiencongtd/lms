@@ -104,7 +104,7 @@ const page = async ({
             className="underline text-primary"
             target="_blank"
           >
-            Evondev
+            toanthaycong
           </Link>
         </div>
       </div>

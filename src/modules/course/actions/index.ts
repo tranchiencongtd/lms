@@ -229,8 +229,9 @@ export async function handleEnrollCourse({
       status: OrderStatus.Pending,
     });
     if (existOrder) {
+      const domain = process.env.APP_DOMAIN || "https://toanthaycong.com";
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào ${domain}/order/${existOrder.code} để xem`,
       };
     }
     const orderObject: {
@@ -305,8 +306,9 @@ export async function handleEnrollPackage({
       status: OrderStatus.Pending,
     });
     if (existOrder) {
+      const domain = process.env.APP_DOMAIN || "https://toanthaycong.com";
       return {
-        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào https://toanthaycong.com/order/${existOrder.code} để xem`,
+        error: `Bạn đang có một đơn hàng đang chờ xử lý. Truy cập vào ${domain}/order/${existOrder.code} để xem`,
       };
     }
     const newOrder = new OrderModel({

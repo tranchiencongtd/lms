@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
       <h1 className=" text-secondary font-bold text-xl inline-block mb-5">
-        Khóa học Coaching Online 101 với Evondev
+        Học Online 1-1 với thầy Công
       </h1>
       <div></div>
       <Link
